@@ -70,7 +70,11 @@ int main()
 		{ 
 			a = pop(&header);
 			b = pop(&header);
-			push(&header, a + b);
+			if (a + b)
+				push(&header, 1);
+			else
+				push(&header, 0);
+
 		}
 		if (buf == '^')
 		{ 
